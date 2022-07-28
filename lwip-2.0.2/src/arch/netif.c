@@ -94,7 +94,7 @@ err_t net_init(char *ifname)
   char cmd[256];
   char errbuf[PCAP_ERRBUF_SIZE];
   u8_t mac_addr[6];
-  char *dev;
+  char *dev = "ens33";
   ip_addr_t ip = {0};
   ip_addr_t gw = {0};
   ip_addr_t mask = {0};
@@ -104,12 +104,12 @@ err_t net_init(char *ifname)
   if (ifname == NULL)
   {
 _netdev_try:
-    dev = pcap_lookupdev(errbuf);
-    if(dev == NULL)
-    {
-      printf("PCAP locckup device error: %s\n", errbuf);
-      return ERR_IF;
-    }
+    // dev = pcap_lookupdev(errbuf);
+    // if(dev == NULL)
+    // {
+    //   printf("PCAP locckup device error: %s\n", errbuf);
+    //   return ERR_IF;
+    // }
     printf("Found ethif: %s\n", dev);
 
     /* Get the network address and mask */

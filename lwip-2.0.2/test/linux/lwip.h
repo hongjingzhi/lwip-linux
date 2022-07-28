@@ -26,7 +26,7 @@
 #include <lwip/igmp.h>
 
 #define TCP_SERVER_PRIO           TCP_PRIO_MIN
-#define TCP_REMOTE_SERVER_ADDR    ((12 << 24) | (2 << 16) | (168 << 8) | (192))
+#define TCP_REMOTE_SERVER_ADDR    ((128 << 24) | (189 << 16) | (168 << 8) | (192))
 #define TCP_REMOTE_SERVER_PORT    6677
 #define TCP_LOCAL_SERVER_PORT     6677
 

@@ -33,7 +33,8 @@ endif
 endif
 
 -include ../makefile.defs
-
+CFLAGS	= -O0
+CFLAGS += -g3
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
@@ -43,7 +44,7 @@ all: lwip-linux
 lwip-linux: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross GCC Linker'
-	gcc  -o "lwip-linux" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "lwip-linux" $(OBJS) $(USER_OBJS) $(LIBS) $(CFLAGS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
